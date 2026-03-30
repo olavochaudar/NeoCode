@@ -1,0 +1,112 @@
+/* 1. Importação da Fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* 2. Tailwind (Mantendo o seu formato de import) */
+@import 'tailwindcss';
+
+/* 3. Configurações Globais do HTML */
+html {
+  scroll-behavior: smooth;
+  /* Espaço para o header não cobrir o título ao clicar no menu */
+  scroll-padding-top: 110px;
+  overflow-x: hidden;
+}
+
+/* 4. Estilo do Body (Preto Piano + Font Smoothing) */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0b0b0d; /* Fundo Preto Piano */
+  color: #f5f5f7; /* Texto Branco Suave */
+  font-family: 'Poppins', sans-serif;
+
+  /* Renderização Premium da Fonte (Apple Style) */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 5. Seleção de Texto em Azul Apple */
+::selection {
+  background-color: rgba(10, 132, 255, 0.4);
+  color: #ffffff;
+}
+
+/* 6. Barra de Scroll Personalizada (Dark & Blue) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2e;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0a84ff; /* Fica azul ao passar o mouse */
+}
+
+/* 7. Efeito de Vidro (Backdrop Blur) para o Header */
+.backdrop-blur-md {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* 8. REMOVER O QUADRADO CINZA AO CLICAR NO MOBILE */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 9. MÁSCARA DE GRADIENTE (Para a foto sumir suavemente no fundo) */
+/* Isso substitui a sombra preta "feia" por uma transparência natural */
+.image-mask-fade {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/* 10. Ajuste para o Botão de Projetos (Glow sutil) */
+.btn-shadow-blue {
+  box-shadow: 0 10px 25px -5px rgba(10, 132, 255, 0.4);
+}
+
+/* ============================================================
+   ADICIONADO: EFEITOS SURREAIS (SHINE & GLOW) 
+   ============================================================ */
+
+/* Animação do reflexo de luz (Vidro polido) */
+@keyframes glass-shine {
+  from {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  to {
+    transform: translateX(250%) skewX(-15deg);
+  }
+}
+
+.animate-shine {
+  animation: glass-shine 3.5s infinite ease-in-out;
+}
+
+/* Animação de revelação automática das logos no Mobile */
+@keyframes mobile-glow {
+  0%,
+  100% {
+    filter: grayscale(100%);
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    filter: grayscale(0%) brightness(1.2);
+    opacity: 1;
+    transform: scale(1.1);
+    drop-shadow: 0 0 15px rgba(10, 132, 255, 0.5);
+  }
+}
+
+.animate-mobile-reveal {
+  animation: mobile-glow 4s infinite ease-in-out;
+}
