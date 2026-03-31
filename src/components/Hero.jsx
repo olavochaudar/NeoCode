@@ -43,7 +43,7 @@ const Hero = () => {
 
             <div className='relative' style={imageMask}>
               <img
-                src="CeoFunder.png"
+                src="Ceo.png"
                 alt="CEO Olavo Chaudar"
                 className='w-full max-w-[420px] h-auto relative z-10'
               />
@@ -70,7 +70,7 @@ const Hero = () => {
               <div className='absolute inset-0 bg-[#0A84FF] rounded-full blur-[80px] opacity-15'></div>
               <div className='relative' style={imageMask}>
                 <img
-                  src="CeoFunder.png"
+                  src="Ceo.png"
                   alt="CEO Olavo Chaudar"
                   className='w-48 h-auto relative z-10'
                 />
