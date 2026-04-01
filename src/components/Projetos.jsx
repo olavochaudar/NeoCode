@@ -128,7 +128,7 @@ const Projetos = () => {
         >
           <p className='text-[#6E6E73] text-lg mb-8 font-light'>Deseja ver mais do nosso trabalho?</p>
           <a
-            href="http://localhost:5173/#projetos" // O link para o seu outro site
+            href="https://portfolioneocode.netlify.app/" // O link para o seu outro site
             className='group relative inline-flex items-center gap-3 bg-[#0A84FF] text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-[#0071e3] transition-all shadow-[0_0_30px_rgba(10,132,255,0.4)] hover:scale-105 active:scale-95'
           >
             Explore mais Alguns Projetos
