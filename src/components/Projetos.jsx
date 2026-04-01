@@ -10,7 +10,7 @@ const Projetos = () => {
       imgPc: "Sw4Pc.png",
       imgMobile: "Sw4Mobile.jpeg",
       link: "https://sw4in.netlify.app/",
-      corGlow: "rgba(255, 214, 10, 0.12)" // Dourado
+      corGlow: "rgba(255, 214, 10, 0.12)"
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ const Projetos = () => {
       imgPc: "SerrariaPc.png",
       imgMobile: "serrariaMobile.jpeg",
       link: "https://serrariavilasene.netlify.app/",
-      corGlow: "rgba(48, 209, 88, 0.12)" // Verde
+      corGlow: "rgba(48, 209, 88, 0.12)"
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ const Projetos = () => {
       imgPc: "DashboardPc.png",
       imgMobile: "dashboardMobile.jpeg",
       link: "https://financeiroconnected.netlify.app/",
-      corGlow: "rgba(10, 132, 255, 0.12)" // Azul
+      corGlow: "rgba(10, 132, 255, 0.12)"
     }
   ];
 
@@ -108,12 +108,9 @@ const Projetos = () => {
                     href={projeto.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='group relative inline-flex items-center mx-auto md:mx-0 bg-[#F5F5F7] text-[#0B0B0D] px-10 py-4 rounded-full font-bold text-sm hover:bg-white hover:scale-105 transition-all shadow-xl active:scale-95'
+                    className='group relative inline-flex items-center mx-auto md:mx-0 bg-[#1C1C1E] text-white border border-white/10 px-10 py-4 rounded-full font-bold text-sm hover:bg-white hover:text-black transition-all shadow-xl active:scale-95'
                   >
                     Ver Projeto Ao Vivo
-                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
                   </a>
                 </div>
               </motion.div>
@@ -121,6 +118,25 @@ const Projetos = () => {
             </div>
           ))}
         </div>
+
+        {/* --- NOVO BOTÃO: EXPLORAR GALERIA COMPLETA --- */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className='mt-32 md:mt-48 text-center'
+        >
+          <p className='text-[#6E6E73] text-lg mb-8 font-light'>Deseja ver mais do nosso trabalho?</p>
+          <a
+            href="http://localhost:5173/#projetos" // O link para o seu outro site
+            className='group relative inline-flex items-center gap-3 bg-[#0A84FF] text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-[#0071e3] transition-all shadow-[0_0_30px_rgba(10,132,255,0.4)] hover:scale-105 active:scale-95'
+          >
+            Explore mais Alguns Projetos
+            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </motion.div>
 
       </div>
     </section>

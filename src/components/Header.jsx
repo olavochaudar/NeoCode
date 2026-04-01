@@ -21,7 +21,7 @@ const Header = () => {
         <div className='z-[110]'>
           <a href="#home">
             <img
-              src="LogoNeoCode.png"
+              src="LogoMaisIcone.png"
               alt="Logo"
               className='h-8 md:h-11 w-auto object-contain hover:drop-shadow-[0_0_8px_rgba(10,132,255,0.3)] transition-all'
             />

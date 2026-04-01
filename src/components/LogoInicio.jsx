@@ -75,7 +75,7 @@ const LogoInicio = () => {
 
         {/* LOGO - TAMANHO REDUZIDO (max-w-[180px] no mobile / max-w-[400px] no desktop) */}
         <motion.img
-          src="LogoNeoCode.png"
+          src="LogoMaisIcone.png"
           alt="Logo"
           style={{ translateZ: "40px" }}
           className='relative w-full max-w-[180px] md:max-w-[400px] h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] brightness-105 contrast-105 select-none'
